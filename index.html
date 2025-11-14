@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Desktop Version -->
+    <div class="desktop-container">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <h1 class="title">Currency Converter</h1>
+            <p class="subtitle">Integer egestas erat et porta hendrerit. Sed mauris pharetra viverra, rutrum sed nibh.</p>
+
+            <div class="converter-card">
+                <div class="form-group">
+                    <label>Amount</label>
+                    <input type="number" id="desktop-amount" class="input-field" placeholder="0" value="1">
+                </div>
+
+                <div class="form-group">
+                    <label>From</label>
+                    <div class="select-wrapper">
+                        <select id="desktop-from" class="select-field">
+                            <option value="">Country</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>To</label>
+                    <div class="select-wrapper">
+                        <select id="desktop-to" class="select-field">
+                            <option value="">Country</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="exchange-rate-section">
+                    <p class="exchange-label">Exchange Rate</p>
+                    <p class="exchange-rate" id="desktop-rate">0.00</p>
+                </div>
+
+                <button class="convert-btn" id="desktop-convert">Convert</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="mobile-container">
+        <div class="mobile-header">
+            <div class="time">19:06</div>
+            <div class="status-icons">
+                <span class="signal"></span>
+                <span class="wifi"></span>
+                <span class="battery"></span>
+            </div>
+        </div>
+
+        <div class="mobile-nav">
+            <div class="profile-circle"></div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mobile-content">
+            <h1 class="mobile-title">Currency Converter</h1>
+            <p class="mobile-subtitle">Integer egestas erat et porta hendrerit. Sed mauris pharetra viverra, rutrum sed nibh.</p>
+
+            <div class="mobile-converter-card">
+                <div class="mobile-form-group">
+                    <label>Amount</label>
+                    <input type="number" id="mobile-amount" class="mobile-input-field" placeholder="0" value="1">
+                </div>
+
+                <div class="mobile-form-group">
+                    <label>From</label>
+                    <div class="mobile-select-wrapper">
+                        <select id="mobile-from" class="mobile-select-field">
+                            <option value="">Country</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mobile-form-group">
+                    <label>To</label>
+                    <div class="mobile-select-wrapper">
+                        <select id="mobile-to" class="mobile-select-field">
+                            <option value="">Country</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mobile-exchange-rate-section">
+                    <p class="mobile-exchange-label">Exchange Rate</p>
+                    <p class="mobile-exchange-rate" id="mobile-rate">0.00</p>
+                </div>
+
+                <button class="mobile-convert-btn" id="mobile-convert">Convert</button>
+            </div>
+
+            <div class="mobile-footer">
+                <p>Copyright - Kaymen Communications | 2022 |</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
