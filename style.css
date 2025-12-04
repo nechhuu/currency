@@ -13,19 +13,31 @@ body {
 .desktop-container {
     display: none;
     min-height: 100vh;
-    background: linear-gradient(135deg,
-        rgba(255, 182, 193, 0.3) 0%,
-        rgba(255, 255, 255, 0.5) 25%,
-        rgba(173, 216, 230, 0.3) 50%,
-        rgba(221, 160, 221, 0.3) 75%,
-        rgba(255, 255, 255, 0.5) 100%);
+    background: white;
     position: relative;
 }
 
 .desktop-container::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(255, 182, 193, 0.3) 0%,
+        rgba(255, 255, 255, 0.5) 25%,
+        rgba(173, 216, 230, 0.3) 50%,
+        rgba(221, 160, 221, 0.3) 75%,
+        rgba(255, 255, 255, 0.5) 100%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.desktop-container::after {
+    content: '';
+    position: absolute;
+    top: 185px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -36,6 +48,7 @@ body {
         radial-gradient(circle at 90% 80%, rgba(221, 160, 221, 0.4) 0%, transparent 50%),
         radial-gradient(circle at 10% 90%, rgba(144, 238, 144, 0.4) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 6;
 }
 
 .navbar {
@@ -72,13 +85,18 @@ body {
     padding: 40px 20px;
     position: relative;
     z-index: 10;
+    background: rgba(221, 160, 221, 0.15);
 }
 
 .title {
     font-size: 48px;
     color: #4169E1;
     margin-bottom: 15px;
-    font-weight: 400;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #4169E1;
+    display: inline-block;
+    width: 100%;
 }
 
 .subtitle {
@@ -90,7 +108,11 @@ body {
 .converter-card {
     max-width: 500px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
+    background-color: transparent;
+    border-radius: 12px;
+    position: relative;
+    z-index: 10;
 }
 
 .form-group {
@@ -100,9 +122,10 @@ body {
 
 label {
     display: block;
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 8px;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .input-field {
@@ -167,7 +190,7 @@ label {
 .exchange-rate {
     font-size: 42px;
     color: #4169E1;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .convert-btn {
@@ -193,12 +216,7 @@ label {
     width: 375px;
     height: 812px;
     margin: 0 auto;
-    background: linear-gradient(135deg,
-        rgba(255, 182, 193, 0.3) 0%,
-        rgba(255, 255, 255, 0.5) 25%,
-        rgba(173, 216, 230, 0.3) 50%,
-        rgba(221, 160, 221, 0.3) 75%,
-        rgba(255, 255, 255, 0.5) 100%);
+    background: white;
     position: relative;
     border-radius: 40px;
     overflow: hidden;
@@ -208,7 +226,24 @@ label {
 .mobile-container::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(255, 182, 193, 0.3) 0%,
+        rgba(255, 255, 255, 0.5) 25%,
+        rgba(173, 216, 230, 0.3) 50%,
+        rgba(221, 160, 221, 0.3) 75%,
+        rgba(255, 255, 255, 0.5) 100%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.mobile-container::after {
+    content: '';
+    position: absolute;
+    top: 185px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -219,6 +254,7 @@ label {
         radial-gradient(circle at 90% 80%, rgba(221, 160, 221, 0.4) 0%, transparent 50%),
         radial-gradient(circle at 10% 90%, rgba(144, 238, 144, 0.4) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 6;
 }
 
 .mobile-header {
@@ -282,6 +318,7 @@ label {
     padding: 20px;
     position: relative;
     z-index: 10;
+    background: rgba(221, 160, 221, 0.15);
 }
 
 .mobile-title {
@@ -289,7 +326,9 @@ label {
     color: #4169E1;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 400;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4169E1;
 }
 
 .mobile-subtitle {
@@ -302,6 +341,11 @@ label {
 
 .mobile-converter-card {
     padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .mobile-form-group {
@@ -311,9 +355,10 @@ label {
 
 .mobile-form-group label {
     display: block;
-    color: #666;
-    font-size: 12px;
-    margin-bottom: 6px;
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 4px;
+    font-weight: 400;
 }
 
 .mobile-input-field {
@@ -376,7 +421,7 @@ label {
 .mobile-exchange-rate {
     font-size: 36px;
     color: #4169E1;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .mobile-convert-btn {
@@ -394,15 +439,15 @@ label {
 
 .mobile-footer {
     text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    background: rgba(65, 105, 225, 0.8);
-    border-radius: 10px;
+    margin-top: 20px;
+    padding: 15px 0;
+    background: transparent;
+    border-radius: 0;
 }
 
 .mobile-footer p {
-    color: white;
-    font-size: 10px;
+    color: #666;
+    font-size: 9px;
 }
 
 /* Responsive */
