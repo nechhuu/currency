@@ -94,7 +94,6 @@ body {
     margin-bottom: 15px;
     font-weight: 700;
     padding-bottom: 20px;
-    border-bottom: 3px solid #4169E1;
     display: inline-block;
     width: 100%;
 }
@@ -328,7 +327,6 @@ label {
     margin-bottom: 10px;
     font-weight: 700;
     padding-bottom: 15px;
-    border-bottom: 2px solid #4169E1;
 }
 
 .mobile-subtitle {
